@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.GitHubDesktop</string>
+	<key>Input</key>
+	<dict>
+		<key>DOWNLOAD_URL</key>
+		<string>https://central.github.com/mac/latest</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/GitHub</string>
+		<key>NAME</key>
+		<string>GitHub Desktop</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>description</key>
+			<string>Desktop app made by GitHub for seamless contribution to git projects. &lt;br&gt;&lt;br&gt;
+&lt;img src="http://munkitest1.bmr.local/munki_repo/artwork/GitHub%20Desktop_pic.png"&gt;</string>
+			<key>developer</key>
+			<string>GitHub, Inc.</string>
+			<key>category</key>
+                        <string>Developer</string>
+			<key>icon_name</key>
+			<string>GitHub Desktop.icns</string>
+			<key>display_name</key>
+			<string>GitHub Desktop</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>postinstall_script</key>
+			<string>#!/bin/bash
+
+DEST_DIR="/usr/local/bin"
+
+if [[ ! -d "$DEST_DIR" ]]; then
+    mkdir -p "$DEST_DIR"
+fi
+
+ln -s "/Applications/GitHub Desktop.app/Contents/Resources/git-lfs/bin/git-lfs" "$DEST_DIR/git-lfs"
+ln -s "/Applications/GitHub Desktop.app/Contents/MacOS/github_cli" "$DEST_DIR/github"
+
+exit 0
+            </string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.homebysix.munki.GitHubDesktop</string>
+</dict>
+</plist>

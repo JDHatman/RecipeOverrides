@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.MAS-MicrosoftRemoteDesktop</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/AppStore</string>
+		<key>NAME</key>
+		<string>Xcode</string>
+		<key>PATH</key>
+		<string>/Applications/%NAME%.app</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>stable</string>
+			</array>
+			<key>category</key>
+                        <string>Developer</string>
+			<key>icon_name</key>
+			<string>Xcode.icns</string>
+			<key>developer</key>
+                        <string>Apple</string>
+			<key>description</key>
+			<string>Xcode includes everything developers need to create great applications for Mac, iPhone, iPad, Apple TV, and Apple Watch. Xcode provides developers a unified workflow for user interface design, coding, testing, and debugging.  &lt;br&gt;&lt;br&gt;
+&lt;img src="http://munkitest1.bmr.local/munki_repo/artwork/Xcode_pic.jpeg"&gt;</string>
+			<key>display_name</key>
+			<string>%NAME%</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<false/>
+			<key>postinstall_script</key>
+    			<string>#!/bin/sh
+# accept Xcode license
+/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -license accept
+# install embedded packages
+for PKG in `/bin/ls /Applications/Xcode.app/Contents/Resources/Packages/*.pkg` ; do
+    /usr/sbin/installer -pkg "$PKG" -target /
+done
+    			</string>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.nmcspadden.munki.appstore</string>
+</dict>
+</plist>

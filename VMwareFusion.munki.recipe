@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.VMwareFusion</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/VMware</string>
+		<key>NAME</key>
+		<string>VMwareFusion</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+			<string>Productivity</string>
+			<key>description</key>
+			<string>VMware Fusion 8 is the easiest, fastest and most reliable way to run Windows® applications on a Mac® without rebooting. It is recommended for new and existing Mac users who want to continue running the Windows application they can’t live without. &lt;br&gt;&lt;br&gt;
+&lt;img src="http://munkitest1.bmr.local/munki_repo/artwork/VMwareFusion_pic.jpg"&gt;</string>
+			<key>developer</key>
+			<string>VMware</string>
+			<key>icon_name</key>
+        		<string>VMwareFusion.icns</string>
+			<key>display_name</key>
+			<string>VMWare Fusion Pro</string>
+			<key>name</key>
+			<string>%NAME%</string>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.justinrummel.munki.VMwareFusion</string>
+</dict>
+</plist>

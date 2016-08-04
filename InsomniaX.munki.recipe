@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.InsomniaX</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/InsomniaX</string>
+		<key>NAME</key>
+		<string>InsomniaX</string>
+		<key>SPARKLE_FEED_URL</key>
+		<string>http://insomniax.semaja2.net/appcast.xml</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>stable</string>
+			</array>
+			<key>description</key>
+			<string>Mouse jiggler for OS X, can prevent sleep. &lt;br&gt;&lt;br&gt;
+&lt;img src="http://munkitest1.bmr.local/munki_repo/artwork/InsomniaX_pic.jpg"&gt;</string>
+			<key>display_name</key>
+			<string>InsomniaX</string>
+			<key>developer</key>
+        		<string>Semaja2</string>
+        		<key>category</key>
+        		<string>Utilities</string>
+        		<key>icon_name</key>
+        		<string>InsomniaX.icns</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.keeleysam.recipes.InsomniaX.munki</string>
+</dict>
+</plist>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.SuspiciousPackageApp</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>SuspiciousPackageApp</string>
+		<key>PKG_URL</key>
+		<string>http://www.mothersruin.com/software/downloads/SuspiciousPackage.dmg</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+                        <string>Utilities</string>
+			<key>icon_name</key>
+			<string>SuspiciousPackageApp.icns</string>
+			<key>description</key>
+			<string>Suspicious Package: An Application for Inspecting OS X Installer Packages &lt;br&gt;&lt;br&gt;
+&lt;img src="http://munkitest1.bmr.local/munki_repo/artwork/SuspiciousPackageApp_pic.jpg"&gt;</string>
+			<key>display_name</key>
+			<string>Suspicious Package App</string>
+			<key>minimum_os_version</key>
+			<string>10.9</string>
+			<key>name</key>
+			<string>%NAME%</string>
+		</dict>
+		<key>repo_subdirectory</key>
+		<string>apps/mothersruin</string>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.poundbangbash.eholtam-recipes.munki.SuspiciousPackageApp</string>
+</dict>
+</plist>

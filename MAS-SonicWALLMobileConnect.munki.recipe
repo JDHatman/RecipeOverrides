@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.MAS-SonicWALLMobileConnect</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/AppStore</string>
+		<key>NAME</key>
+		<string>SonicWALL Mobile Connect</string>
+		<key>PATH</key>
+		<string>/Applications/%NAME%.app</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>stable</string>
+			</array>
+			<key>display_name</key>
+			<string>%NAME%</string>
+			<key>developer</key>
+        		<string>SonicWALL, Inc.</string>
+        		<key>category</key>
+        		<string>Business</string>
+        		<key>icon_name</key>
+        		<string>SonicWALL Mobile Connect.icns</string>
+			<key>description</key>
+        		<string>SonicWALL® Mobile Connect™ provides users full network-level access to corporate and academic resources over encrypted SSL VPN connections. The client provides anytime, anywhere access to critical applications such as email, virtual desktop sessions and other iOS applications. &lt;br&gt;&lt;br&gt;
+&lt;img src="http://munkitest1.bmr.local/munki_repo/artwork/SonicWALL%20Mobile%20Connect_pic.png"&gt;</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.nmcspadden.munki.appstore</string>
+</dict>
+</plist>

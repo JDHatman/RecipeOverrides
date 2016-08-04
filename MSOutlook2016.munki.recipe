@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.MSOutlook2016</string>
+	<key>Input</key>
+	<dict>
+		<key>LOCALE_ID</key>
+		<string>1033</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/Microsoft/Office2016</string>
+		<key>NAME</key>
+		<string>MSOutlook2016</string>
+		<key>VERSION</key>
+		<string>latest</string>
+		<key>munki_required_update_name</key>
+		<string></string>
+		<key>pkginfo</key>
+		<dict>
+			<key>blocking_applications</key>
+			<array>
+				<string>Microsoft Outlook</string>
+				<string>Microsoft Error Reporting</string>
+				<string>Microsoft Auto Update</string>
+			</array>
+			<key>catalogs</key>
+			<array>
+				<string>stable</string>
+			</array>
+			<key>developer</key>
+        		<string>Microsoft</string>
+        		<key>category</key>
+        		<string>Office</string>
+        		<key>icon_name</key>
+        		<string>MSOutlook2016.icns</string>
+			<key>description</key>
+        		<string>&lt;html&gt;&lt;p style="font-family:Helvetica;font-size:12px"&gt;For detailed information about this update, please visit the following Web site: &lt;/p&gt;
+
+&lt;p style="font-family:Helvetica;font-size:12px"&gt;&lt;a href="https://go.microsoft.com/fwlink/?LinkID=799195" target="_blank"&gt;https://go.microsoft.com/fwlink/?LinkID=799195&lt;/a&gt;&lt;/p&gt;&lt;/html&gt; &lt;br&gt;&lt;br&gt;
+&lt;img src="http://munkitest1.bmr.local/munki_repo/artwork/MSOutlook2016_pic.png"&gt;</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.munki.MSOutlook2016</string>
+</dict>
+</plist>
